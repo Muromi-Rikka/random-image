@@ -3,10 +3,14 @@
   "version": "1.0.50",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "bun run --watch src/index.ts"
+    "dev": "bun run --watch src/index.ts",
+    "build": "bun build src/index.ts --target bun --outdir ./dist",
+    "start": "NODE_ENV=production bun dist/index.js"
   },
   "dependencies": {
-    "elysia": "latest"
+    "@elysiajs/cors": "^1.1.1",
+    "elysia": "latest",
+    "sharp": "^0.33.5"
   },
   "devDependencies": {
     "bun-types": "latest"
